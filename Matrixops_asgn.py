@@ -67,17 +67,14 @@ class Matrixops():
     
     # (e) Norm of a matrix
     def Norm(self, m):
-        print("Norm of the given matrix is:-")
-        m2 = Matrixops()
-        m2.Matrix(m)
-        self.mat = m
-        h = m2.transpose(m)
-        self.multimtx = m2.Multiply(h,m)
-        sum = 0
-        for i in range(0,len(self.multimtx)):
-            sum = sum + self.multimtx[i][i]
-        
-        return sum
+        sum =0
+        row = len(m)
+        col = len(m[0])
+        for i in range(row):
+            for j in range(col):
+                sum = sum + math.pow(m[i][j],2)
+    
+        return math.sqrt(sum)
     
     # (f) Row reduction of a matrix (RREF)
     def rref(self,matrix):
