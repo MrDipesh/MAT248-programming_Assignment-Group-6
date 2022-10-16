@@ -1,6 +1,7 @@
 import time
 import MatrixInversion
 import Rankofmatrix
+import math
 class Matrixops():
     #Extra required functions
     # 1.Defining a matrix
